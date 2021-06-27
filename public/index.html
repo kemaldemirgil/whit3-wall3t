@@ -11,41 +11,57 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <title>Budget Tracker</title>
 </head>
 <body>
-  <div class="wrapper">
-    <div class="total">
-      <div class="total">Your total is: $<span id="total">0</span></div>
-    </div>
-
-    <div class="form">
-      <input type="text" id="t-name" placeholder="Name of transaction" />
-      <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
-      <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
-      <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
-      <p class="error"></p>
-    </div>
-
-    <div class="transactions">
-      <table>
-        <thead>
-          <th>Transaction</th>
-          <th>Amount</th>
-        </thead>
-        <tbody id="tbody">
-          
-        </tbody>
-      </table>
-    </div>
+  
+  <div class="content">
     
-    <canvas id="myChart"></canvas>
-  </div>
+    <video autoplay muted loop id="myVideo">
+      <source src="./bg/night.mp4" type="video/mp4">
+    </video>
 
+      <div class="wrapper">
+        <div class="total">
+          <p data-aos="zoom in" data-aos-offset="0" data-aos-duration="3000" data-aos-delay="200" class="text">whit3 wall3t</p>
+          <!-- <h1>whit3 wall3t</h1> -->
+          <div data-aos="flip-up" data-aos-offset="0" class="total">currency: $<span id="total">0</span></div>
+        </div>
+    
+        <div class="form">
+          <input type="text" id="t-name" placeholder="Name" />
+          <input type="number" min="0" id="t-amount" placeholder="Amount" />
+          <button id="add-btn" data-tilt data-tilt-scale="1.1"><i class="fa fa-plus buttons"></i> Add Funds</button>
+          <button id="sub-btn" data-tilt data-tilt-reverse="true"><i class="fa fa-minus"></i> Subtract Funds</button>
+          <p class="error"></p>
+        </div>
+    <div data-aos="zoom-out" data-aos-offset="0">
+      <div class="transactions">
+        <table>
+          <thead>
+            <th>Transaction</th>
+            <th>Amount</th>
+          </thead>
+          <tbody id="tbody">
+            
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+        <div data-aos="fade-up" data-aos-offset="30">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <small>created by kemaldemirgil</small>
+    </div>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="/db.js"></script>
-  <script src="index.js"></script>
+  <script src="/index.js"></script>
   <script>
     if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
@@ -54,6 +70,18 @@
         });
       });
     }
+    </script>
+
+
+
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      offset: 400,
+      easing: 'ease-in'
+    });
   </script>
+  <script type="text/javascript" src="vanilla-tilt.js"></script>
 </body>
+<div class="darkness"></div>
 </html>

@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Codystar&family=Libre+Barcode+39+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
 body {
   font-size: 120%;
   font-family: Arial;
@@ -16,10 +25,11 @@ td, th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
+  background: rgba(0, 0, 0, 0.508);
 }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
+th {
+  background-color: rgba(102, 102, 255, 0.255);
 }
 
 .error {
@@ -34,18 +44,136 @@ tr:nth-child(even) {
 
 .total {
   font-size: 150%;
-  text-decoration: underline;
+  color:#ffe100;
+  font-family: 'Codystar', cursive;
 }
 
 .form {
-  margin-top: 25px;
+  margin: 5% 0;
   width: 100%;
 }
+
+.form input {
+  display: block;
+  margin: 1% auto;
+  background-color: rgba(160, 160, 160, 0.179);
+  border: none;
+  padding: 2%;
+  color:rgba(5, 118, 230, 0.597);
+  font-family: 'Julius Sans One', sans-serif;
+  width: 40%;
+  font-size: 102%;
+  border: 1px solid #525252;
+}
+
+.form button {
+  display: block;
+  margin: 3% auto;
+  padding: 3%;
+  width: 40%;
+  background-color: rgba(160, 160, 160, 0.179);
+  border: none;
+  color:rgba(5, 230, 24, 0.597);
+  border: 1px solid #525252;
+  font-size: 130%;
+  cursor: pointer;
+}
+
+.form button:hover {
+  background-color: rgba(131, 128, 28, 0.09);
+}
+
+#sub-btn {
+  color:rgba(230, 5, 5, 0.597);
+}
+
+
+.form input:focus {
+  background: rgba(0, 0, 0, 0.508);
+  border: none;
+}
+
+
 
 .transactions {
   text-align: left;
   max-height: 300px;
   overflow: auto;
   width: 90%;
-  margin: 0 auto;
+  margin: 5% auto;
+  background: rgba(0, 0, 0, 0.316);
+  color: #dddddd;
+}
+
+ .transactions::-webkit-scrollbar {
+  display: none;
+}
+
+.transactions {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} 
+
+/* ............. */
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -2;
+}
+
+.darkness {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: -1;
+}
+
+#myChart {
+  background: rgba(0, 0, 0, 0.378);
+  margin-top: 10%;
+  color: #dddddd;
+  border: 1px solid #dddddd;
+}
+
+.footer {
+  padding: 1px;
+  margin-top: 50%;
+  margin-bottom: 10%;
+  text-align: center;
+  display: block;
+}
+
+small {
+  background-image: linear-gradient(to right, #9b64f37b,#dac3ff);
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent;
+  font-family: 'Codystar', cursive;
+}
+
+.text{ 
+  background-image: linear-gradient(to right, #00F260, #f79d00, #0575E6, #64f38c);
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent;
+  font-size: 450%;
+  font-family: 'Libre Barcode 39 Text', cursive;
+  background-size: 300%;
+  background-position: -100%;  
+  margin: 5% 0;
+  animation: animatedText 10s infinite alternate-reverse;
+}
+
+
+@keyframes animatedText{
+  to{
+    background-position: 100%; 
+  }
 }
