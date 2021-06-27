@@ -59,7 +59,7 @@ th {
   background-color: rgba(160, 160, 160, 0.179);
   border: none;
   padding: 2%;
-  color:rgba(5, 118, 230, 0.597);
+  color:rgb(120, 187, 255);
   font-family: 'Julius Sans One', sans-serif;
   width: 40%;
   font-size: 102%;
@@ -93,8 +93,6 @@ th {
   border: none;
 }
 
-
-
 .transactions {
   text-align: left;
   max-height: 300px;
@@ -113,8 +111,6 @@ th {
   -ms-overflow-style: none;
   scrollbar-width: none;
 } 
-
-/* ............. */
 
 #myVideo {
   position: fixed;
@@ -170,7 +166,6 @@ small {
   margin: 5% 0;
   animation: animatedText 10s infinite alternate-reverse;
 }
-
 
 @keyframes animatedText{
   to{
