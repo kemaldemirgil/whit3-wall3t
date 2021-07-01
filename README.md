@@ -10,7 +10,7 @@
 </p>
 
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://my-fit-track.herokuapp.com/)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://whitewallet.herokuapp.com/)
 
 
 
